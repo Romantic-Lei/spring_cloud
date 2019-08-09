@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<!-- ConsoleAppender 指定日志输出到控制台 -->
+	<appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- layout 表明输出格式 -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%d{yyyy/MM/dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} -- %msg%n</pattern>
+		</layout>
+	</appender>
+	
+	<!-- 指定日志输出级别，只有高于此级别的日志才会被输出  -->
+	<root level="info">
+		<appender-ref ref="consoleLog" />
+	</root>
+</configuration>
